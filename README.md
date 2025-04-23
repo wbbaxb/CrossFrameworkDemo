@@ -98,6 +98,14 @@ public static string GetPublicMessage()
 2. **性能最好** - 直接调用导出函数，避免了反射的性能开销
 3. **类型安全** - 在编译时即可检查类型错误
 
+## Python调用示例
+
+项目根目录下的`call_dotnet_dll.py`脚本展示了如何通过Python调用DLL导出的函数：
+
+使用方法：
+1. 确保已编译好CrossFrameworkLibrary.dll
+2. 运行Python脚本：`python call_dotnet_dll.py`
+
 ## 许可证
 
 本项目使用MIT许可证。详细信息请参阅[LICENSE](LICENSE)文件。
