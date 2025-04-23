@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossFrameworkDemo", "CrossFrameworkDemo\CrossFrameworkDemo.csproj", "{09AC546F-390E-2C6E-E8B8-172A354C3C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossFrameworkLibrary", "CrossFrameworkLibrary\CrossFrameworkLibrary.csproj", "{001EB961-C83B-4979-B317-13610E2DF019}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09AC546F-390E-2C6E-E8B8-172A354C3C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09AC546F-390E-2C6E-E8B8-172A354C3C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09AC546F-390E-2C6E-E8B8-172A354C3C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09AC546F-390E-2C6E-E8B8-172A354C3C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001EB961-C83B-4979-B317-13610E2DF019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001EB961-C83B-4979-B317-13610E2DF019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001EB961-C83B-4979-B317-13610E2DF019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001EB961-C83B-4979-B317-13610E2DF019}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E621349A-23EF-459C-896E-53D2C3DCC30E}
+	EndGlobalSection
+EndGlobal
