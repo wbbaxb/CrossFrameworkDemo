@@ -13,6 +13,9 @@ namespace CrossFrameworkDemo
         public MainWindow()
         {
             InitializeComponent();
+            this.btnReference.Click += AccessByReference;
+            this.btnReflection.Click += AccessByReflection;
+            this.btnDllImport.Click += AccessByDllImport;
         }
 
         public void AccessByReference(object sender, RoutedEventArgs e)
@@ -36,6 +39,13 @@ namespace CrossFrameworkDemo
             {
                 AppendText($"Error occurred during testing: {ex.Message}");
             }
+            finally
+            {
+                if (this.btnDllImport.IsEnabled)
+                {
+                    this.btnDllImport.IsEnabled = false;
+                }
+            }
         }
 
         public void AccessByReflection(object sender, RoutedEventArgs e)
@@ -45,6 +55,11 @@ namespace CrossFrameworkDemo
             InvokeMethodByReflection("GetInternalMessage"); // 正常调用
 
             InvokeMethodByReflection("RemotingTest"); // 涉及.NET Framework独有API，调用失败
+
+            if (this.btnDllImport.IsEnabled)
+            {
+                this.btnDllImport.IsEnabled = false;
+            }
         }
 
         public void AccessByDllImport(object sender, RoutedEventArgs e)
@@ -60,6 +75,18 @@ namespace CrossFrameworkDemo
             catch (Exception ex)
             {
                 AppendText("Remoting Called Failed: " + ex);
+            }
+            finally
+            {
+                if (this.btnReference.IsEnabled)
+                {
+                    this.btnReference.IsEnabled = false;
+                }
+
+                if (this.btnReflection.IsEnabled)
+                {
+                    this.btnReflection.IsEnabled = false;
+                }
             }
         }
 
@@ -117,7 +144,7 @@ namespace CrossFrameworkDemo
 
         private void AppendText(string message)
         {
-            this.txtResult.AppendText($"{message}\n");
+            this.txtResult.AppendText($"{DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")} : {message}\n");
             this.txtResult.AppendText("\n");
             this.scrollViewer.ScrollToEnd();
         }
